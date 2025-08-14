@@ -1439,30 +1439,69 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Print Styles */
 @media print {
-    .navbar,
-    .hero,
-    .cta-section {
-        display: none;
+    body, html {
+        background: #fff !important;
+        color: #111 !important;
     }
-    
+    .navbar, .hero, .cta-section, .theme-toggle, .progress-indicator, .mobile-menu-toggle {
+        display: none !important;
+    }
+    .section, .solutions-section, .phase-content, .metric-card, .challenge-card, .arch-component, .risk-card, .footer, .code-preview, .tech-item {
+        background: #fff !important;
+        color: #111 !important;
+        box-shadow: none !important;
+        border-color: #bbb !important;
+    }
+    .section-title, .section-subtitle, h1, h2, h3, h4, h5, h6, .gradient-text, .nav-brand, .stat-number, .metric-value, .challenge-badge, .phase-number, .week-number, .metric-label, .metric-desc, .risk-title {
+        color: #111 !important;
+        background: none !important;
+        -webkit-text-fill-color: #111 !important;
+    }
+    .stat-label, .metric-content p, .challenge-item p, .solution-item p, .risk-description, .risk-mitigation, .footer-info p, .footer-details, .detail-item, .text-secondary, .text-muted {
+        color: #444 !important;
+    }
+    .tech-icon, .metric-icon, .challenge-icon, .risk-icon {
+        background: #eee !important;
+        color: #111 !important;
+        border: 1px solid #bbb !important;
+    }
+    a, a:visited, a:hover {
+        color: #0066cc !important;
+        text-decoration: underline !important;
+    }
+    .code-preview code, pre, code {
+        background: #f5f5f5 !important;
+        color: #111 !important;
+        border: 1px solid #bbb !important;
+    }
+    .solutions-section, .solutions-grid, .metrics-grid, .challenges-grid, .system-metrics, .tech-grid {
+        box-shadow: none !important;
+        background: #fff !important;
+    }
+    .timeline::before, .phase-content::before, .challenge-card::before {
+        background: #bbb !important;
+    }
+    .challenge-badge.high, .challenge-badge.medium, .challenge-badge.low, .risk-icon.high, .risk-icon.medium {
+        background: #eee !important;
+        color: #b30f0f !important;
+        border-color: #bbb !important;
+    }
+    .footer {
+        background: #fff !important;
+        color: #111 !important;
+        border-top: 1px solid #bbb !important;
+    }
+    .container {
+        background: none !important;
+    }
+    .fade-in, .fade-in.visible {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
     .section {
-        padding: 40px 0;
         page-break-inside: avoid;
-    }
-    
-    .section-title {
-        page-break-after: avoid;
-    }
-    
-    body {
-        background: white;
-        color: black;
-    }
-    
-    .bg-card,
-    .bg-tertiary {
-        background: #f5f5f5;
-        border: 1px solid #ddd;
+        padding: 20px 0 !important;
     }
 }
 
